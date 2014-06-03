@@ -1,1 +1,22 @@
-gitcommit
+# eclipse
+.classpath
+.project
+.settings
+.metadata
+eclipse/
+bin/
+
+# gradle
+.gradle/
+build/
+
+# intelij
+out
+*.idea
+*.iml
+*.ipr
+*.iws
+.idea/
+idea/
+
+thumbs.db
