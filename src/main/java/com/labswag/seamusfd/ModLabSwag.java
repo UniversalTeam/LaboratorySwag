@@ -18,7 +18,14 @@ import net.minecraft.item.Item;
 @Mod(modid = ModInfo.MODID, name = ModInfo.MODNAME, version = ModInfo.VERSION)
 public class ModLabSwag {
 
-    public static CreativeTabs labSwagTab = new CreativeTabs("labSwagTab") {
+    public static CreativeTabs labSwagTabBlocks = new CreativeTabs("labSwagTabBlocks") {
+        @Override
+        public Item getTabIconItem() {
+            return new Item();
+        }
+    };
+
+    public static CreativeTabs labSwagTabItems = new CreativeTabs("labSwagTabItems") {
         @Override
         public Item getTabIconItem() {
             return new Item();

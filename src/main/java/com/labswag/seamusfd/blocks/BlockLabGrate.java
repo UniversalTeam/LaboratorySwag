@@ -6,15 +6,16 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
 /**
- * Created by SeamusFD on 6/1/14.
+ * Created by SeamusFD on 6/11/14.
  * All rights belong to me!!
  */
-public class BlockLabPillar extends Block {
-    public BlockLabPillar() {
+public class BlockLabGrate extends Block {
+    public BlockLabGrate() {
         super(Material.iron);
-        this.blockHardness = 10f;
+        this.blockHardness = 20f;
         this.setCreativeTab(ModLabSwag.labSwagTabBlocks);
-        this.setBlockName("labPillar");
-        this.setBlockTextureName(ModInfo.MODID + "labPillar.png");
+        this.setBlockName("labGrate");
+        this.canProvidePower();
+        this.setBlockTextureName(ModInfo.MODID + "labGrate.png");
     }
 }

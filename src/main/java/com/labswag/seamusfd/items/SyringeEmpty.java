@@ -10,6 +10,6 @@ import net.minecraft.item.Item;
 public class SyringeEmpty extends Item {
     public SyringeEmpty() {
         this.setUnlocalizedName("syringeEmpty");
-        this.setCreativeTab(ModLabSwag.labSwagTab);
+        this.setCreativeTab(ModLabSwag.labSwagTabItems);
     }
 }
