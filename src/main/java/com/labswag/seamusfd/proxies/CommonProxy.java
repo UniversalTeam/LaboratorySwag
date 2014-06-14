@@ -31,6 +31,14 @@ public class CommonProxy {
     public static Block lampBlueA;
     public static Block lampYellowD;
     public static Block lampYellowA;
+    public static Block lampGreenD;
+    public static Block lampGreenA;
+    public static Block lampOrangeD;
+    public static Block lampOrangeA;
+    public static Block lampPurpleD;
+    public static Block lampPurpleA;
+    public static Block lampPinkD;
+    public static Block lampPinkA;
 
     //Items
     public static Item syringeEmpty;
@@ -113,6 +121,26 @@ public class CommonProxy {
         GameRegistry.registerBlock(lampYellowD, "lampYellowD");
         lampYellowA = new BlockLampYellowA();
         GameRegistry.registerBlock(lampYellowA, "lampYellowA");
+
+        lampGreenD = new BlockLampGreenD();
+        GameRegistry.registerBlock(lampGreenD, "lampGreenD");
+        lampGreenA = new BlockLampGreenA();
+        GameRegistry.registerBlock(lampGreenA, "lampGreenA");
+
+        lampOrangeD = new BlockLampOrangeD();
+        GameRegistry.registerBlock(lampOrangeD, "lampOrangeD");
+        lampOrangeA = new BlockLampOrangeA();
+        GameRegistry.registerBlock(lampOrangeA, "lampOrangeA");
+
+        lampPurpleD = new BlockLampPurpleD();
+        GameRegistry.registerBlock(lampPurpleD, "lampPurpleD");
+        lampPurpleA = new BlockLampPurpleA();
+        GameRegistry.registerBlock(lampPurpleA, "lampPurpleA");
+
+        lampPinkD = new BlockLampPinkD();
+        GameRegistry.registerBlock(lampPinkD, "lampPinkD");
+        lampPinkA = new BlockLampPinkA();
+        GameRegistry.registerBlock(lampPinkA, "lampPinkA");
     }
 
 //    protected void initArmorMaterials() {
