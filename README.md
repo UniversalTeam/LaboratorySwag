@@ -7,7 +7,6 @@ This is a mod adding different useful laboratory related items to Minecraft
 1. Lab Panel
 2. Lab Grate
 3. Lab Pillar
-
 4. White Lab Lamps
 5. Gray Lab Lamps
 6. Black Lab Lamps
