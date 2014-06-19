@@ -1,8 +1,11 @@
 package com.labswag.seamusfd.proxies;
 
+import codechicken.lib.packet.PacketCustom;
 import com.labswag.seamusfd.blocks.*;
 import com.labswag.seamusfd.blocks.lamps.*;
+import com.labswag.seamusfd.compat.MFPluginListener;
 import com.labswag.seamusfd.items.SyringeEmpty;
+import com.labswag.seamusfd.network.MFSPH;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -58,6 +61,9 @@ public class CommonProxy {
     }
 
     public void init() {
+        PacketCustom.assignHandler(MFSPH.channel, new MFSPH());
+
+        MFPluginListener.handleCommon();
     }
 
     public void postInit() {
