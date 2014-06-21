@@ -1,14 +1,17 @@
 package com.labswag.seamusfd.proxies;
 
-import codechicken.lib.packet.PacketCustom;
 import com.labswag.seamusfd.blocks.*;
 import com.labswag.seamusfd.blocks.lamps.*;
-import com.labswag.seamusfd.compat.MFPluginListener;
-import com.labswag.seamusfd.items.SyringeEmpty;
-import com.labswag.seamusfd.network.MFSPH;
+//import com.labswag.seamusfd.compat.MFPluginListener;
+import com.labswag.seamusfd.items.ItemSyringeEmpty;
+//import com.labswag.seamusfd.network.MFSPH;
+import com.labswag.seamusfd.items.crafting.*;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
+import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 
 /**
  * Created by SeamusFD on 6/1/14.
@@ -45,6 +48,16 @@ public class CommonProxy {
 
     //Items
     public static Item syringeEmpty;
+    public static Item luminousDust;
+    public static Item grayLuminousDust;
+    public static Item blackLuminousDust;
+    public static Item redLuminousDust;
+    public static Item blueLuminousDust;
+    public static Item yellowLuminousDust;
+    public static Item greenLuminousDust;
+    public static Item orangeLuminousDust;
+    public static Item purpleLuminousDust;
+    public static Item pinkLuminousDust;
 
 //    //armor
 //    public static ItemArmor.ArmorMaterial scienceArmor;
@@ -57,13 +70,14 @@ public class CommonProxy {
     public void preInit() {
         initBlocks();
         initItems();
+        initRecipes();
 //        initArmorMaterials();
     }
 
     public void init() {
-        PacketCustom.assignHandler(MFSPH.channel, new MFSPH());
-
-        MFPluginListener.handleCommon();
+//        PacketCustom.assignHandler(MFSPH.channel, new MFSPH());
+//
+//        MFPluginListener.handleCommon();
     }
 
     public void postInit() {
@@ -76,8 +90,38 @@ public class CommonProxy {
 
     protected void initItems() {
         //Items
-        syringeEmpty = new SyringeEmpty();
+        syringeEmpty = new ItemSyringeEmpty();
         GameRegistry.registerItem(syringeEmpty, "syringeEmpty");
+
+        luminousDust = new ItemLuminousDust();
+        GameRegistry.registerItem(luminousDust, "luminousDust");
+
+        grayLuminousDust = new ItemGrayLuminousDust();
+        GameRegistry.registerItem(grayLuminousDust, "grayLuminousDust");
+
+        blackLuminousDust = new ItemBlackLuminousDust();
+        GameRegistry.registerItem(blackLuminousDust, "blackLuminousDust");
+
+        redLuminousDust = new ItemRedLuminousDust();
+        GameRegistry.registerItem(redLuminousDust, "redLuminousDust");
+
+        blueLuminousDust = new ItemBlueLuminousDust();
+        GameRegistry.registerItem(blueLuminousDust, "blueLuminousDust");
+
+        yellowLuminousDust = new ItemYellowLuminousDust();
+        GameRegistry.registerItem(yellowLuminousDust, "yellowLuminousDust");
+
+        greenLuminousDust = new ItemGreenLuminousDust();
+        GameRegistry.registerItem(greenLuminousDust, "greenLuminousDust");
+
+        orangeLuminousDust = new ItemOrangeLuminousDust();
+        GameRegistry.registerItem(orangeLuminousDust, "orangeLuminousDust");
+
+        purpleLuminousDust = new ItemPurpleLuminousDust();
+        GameRegistry.registerItem(purpleLuminousDust, "purpleLuminousDust");
+
+        pinkLuminousDust = new ItemPinkLuminousDust();
+        GameRegistry.registerItem(pinkLuminousDust, "pinkLuminousDust");
 
 //        int ScienceGearRenderIndex = ModLabSwag.proxy.registerArmor("LabArmor");
 //        scienceGlasses = new LabCoatTemplate(scienceArmor, ScienceGearRenderIndex, 0, "scienceGlasses", "labarmor");
@@ -147,6 +191,128 @@ public class CommonProxy {
         GameRegistry.registerBlock(lampPinkD, "lampPinkD");
         lampPinkA = new BlockLampPinkA();
         GameRegistry.registerBlock(lampPinkA, "lampPinkA");
+    }
+
+    protected void initRecipes() {
+        GameRegistry.addRecipe(new ItemStack(lampWhiteD, 5),
+                "yxy",
+                "xzx",
+                "yxy",
+                'y', Items.iron_ingot, 'x', Blocks.iron_bars, 'z', luminousDust);
+
+        GameRegistry.addRecipe(new ItemStack(lampWhiteA, 2),
+                "yxy",
+                "xzx",
+                "yxy",
+                'y', Items.gold_ingot, 'x', Blocks.iron_bars, 'z', luminousDust);
+
+        GameRegistry.addRecipe(new ItemStack(lampGrayD, 5),
+                "yxy",
+                "xzx",
+                "yxy",
+                'y', Items.iron_ingot, 'x', Blocks.iron_bars, 'z', grayLuminousDust);
+
+        GameRegistry.addRecipe(new ItemStack(lampGrayA, 2),
+                "yxy",
+                "xzx",
+                "yxy",
+                'y', Items.gold_ingot, 'x', Blocks.iron_bars, 'z', grayLuminousDust);
+
+        GameRegistry.addRecipe(new ItemStack(lampBlackD, 5),
+                "yxy",
+                "xzx",
+                "yxy",
+                'y', Items.iron_ingot, 'x', Blocks.iron_bars, 'z', blackLuminousDust);
+
+        GameRegistry.addRecipe(new ItemStack(lampBlackA, 2),
+                "yxy",
+                "xzx",
+                "yxy",
+                'y', Items.gold_ingot, 'x', Blocks.iron_bars, 'z', blackLuminousDust);
+
+        GameRegistry.addRecipe(new ItemStack(lampRedD, 5),
+                "yxy",
+                "xzx",
+                "yxy",
+                'y', Items.iron_ingot, 'x', Blocks.iron_bars, 'z', redLuminousDust);
+
+        GameRegistry.addRecipe(new ItemStack(lampRedA, 2),
+                "yxy",
+                "xzx",
+                "yxy",
+                'y', Items.gold_ingot, 'x', Blocks.iron_bars, 'z', redLuminousDust);
+
+        GameRegistry.addRecipe(new ItemStack(lampBlueD, 5),
+                "yxy",
+                "xzx",
+                "yxy",
+                'y', Items.iron_ingot, 'x', Blocks.iron_bars, 'z', blueLuminousDust);
+
+        GameRegistry.addRecipe(new ItemStack(lampBlueA, 2),
+                "yxy",
+                "xzx",
+                "yxy",
+                'y', Items.gold_ingot, 'x', Blocks.iron_bars, 'z', blueLuminousDust);
+
+        GameRegistry.addRecipe(new ItemStack(lampYellowD, 5),
+                "yxy",
+                "xzx",
+                "yxy",
+                'y', Items.iron_ingot, 'x', Blocks.iron_bars, 'z', yellowLuminousDust);
+
+        GameRegistry.addRecipe(new ItemStack(lampYellowA, 2),
+                "yxy",
+                "xzx",
+                "yxy",
+                'y', Items.gold_ingot, 'x', Blocks.iron_bars, 'z', yellowLuminousDust);
+
+        GameRegistry.addRecipe(new ItemStack(lampGreenD, 5),
+                "yxy",
+                "xzx",
+                "yxy",
+                'y', Items.iron_ingot, 'x', Blocks.iron_bars, 'z', greenLuminousDust);
+
+        GameRegistry.addRecipe(new ItemStack(lampGreenA, 2),
+                "yxy",
+                "xzx",
+                "yxy",
+                'y', Items.gold_ingot, 'x', Blocks.iron_bars, 'z', greenLuminousDust);
+
+        GameRegistry.addRecipe(new ItemStack(lampOrangeD, 5),
+                "yxy",
+                "xzx",
+                "yxy",
+                'y', Items.iron_ingot, 'x', Blocks.iron_bars, 'z', orangeLuminousDust);
+
+        GameRegistry.addRecipe(new ItemStack(lampOrangeA, 2),
+                "yxy",
+                "xzx",
+                "yxy",
+                'y', Items.gold_ingot, 'x', Blocks.iron_bars, 'z', orangeLuminousDust);
+
+        GameRegistry.addRecipe(new ItemStack(lampPurpleD, 5),
+                "yxy",
+                "xzx",
+                "yxy",
+                'y', Items.iron_ingot, 'x', Blocks.iron_bars, 'z', purpleLuminousDust);
+
+        GameRegistry.addRecipe(new ItemStack(lampPurpleA, 2),
+                "yxy",
+                "xzx",
+                "yxy",
+                'y', Items.gold_ingot, 'x', Blocks.iron_bars, 'z', purpleLuminousDust);
+
+        GameRegistry.addRecipe(new ItemStack(lampPinkD, 5),
+                "yxy",
+                "xzx",
+                "yxy",
+                'y', Items.iron_ingot, 'x', Blocks.iron_bars, 'z', pinkLuminousDust);
+
+        GameRegistry.addRecipe(new ItemStack(lampPinkA, 2),
+                "yxy",
+                "xzx",
+                "yxy",
+                'y', Items.gold_ingot, 'x', Blocks.iron_bars, 'z', pinkLuminousDust);
     }
 
 //    protected void initArmorMaterials() {

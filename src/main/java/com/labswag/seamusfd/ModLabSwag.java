@@ -9,15 +9,17 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
-import universalteam.universalcore.utils.UCLogger;
+//import universalteam.universalcore.utils.UCLogger;
 
 /**
  * Created by SeamusFD on 6/1/14.
  * All rights belong to me!!
  */
 
-@Mod(modid = ModInfo.MODID, name = ModInfo.MODNAME, version = ModInfo.VERSION, dependencies = "required-after:UniversalCore")
+@Mod(modid = ModInfo.MODID, name = ModInfo.MODNAME, version = ModInfo.VERSION)
 public class ModLabSwag {
+
+//    , dependencies = "required-after:UniversalCore")
 
     public static CreativeTabs labSwagTabBlocks = new CreativeTabs("labSwagTabBlocks") {
         @Override
@@ -36,7 +38,7 @@ public class ModLabSwag {
     @SidedProxy(clientSide = "com.labswag.seamusfd.proxies.ClientProxy", serverSide = "com.labswag.seamusfd.proxies.CommonProxy")
     public static CommonProxy proxy;
 
-    public static UCLogger logger = new UCLogger(ModInfo.MODID);
+//    public static UCLogger logger = new UCLogger(ModInfo.MODID);
 
     @Mod.Instance(ModInfo.MODID)
     public static ModLabSwag instance;
