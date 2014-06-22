@@ -7,7 +7,7 @@ package com.labswag.seamusfd.libs;
 public class ModInfo {
     public static final String MODID = "LabSwag";
     public static final String MODNAME = "Laboratory Swag";
-    public static final String VERSION = "@Version@";
+    public static final String VERSION = "0.1.1";
 
     public static final String CHANNEL = MODID;
 

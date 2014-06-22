@@ -1,6 +1,8 @@
 package com.labswag.seamusfd.proxies;
 
-import com.labswag.seamusfd.blocks.*;
+import com.labswag.seamusfd.blocks.decoration.BlockLabGrate;
+import com.labswag.seamusfd.blocks.decoration.BlockLabPanel;
+import com.labswag.seamusfd.blocks.decoration.BlockLabPillar;
 import com.labswag.seamusfd.blocks.lamps.*;
 //import com.labswag.seamusfd.compat.MFPluginListener;
 import com.labswag.seamusfd.blocks.machines.MachineScientificGrinder;

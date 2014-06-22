@@ -1,4 +1,4 @@
-package com.labswag.seamusfd.blocks;
+package com.labswag.seamusfd.blocks.decoration;
 
 import com.labswag.seamusfd.ModLabSwag;
 import com.labswag.seamusfd.libs.ModInfo;
