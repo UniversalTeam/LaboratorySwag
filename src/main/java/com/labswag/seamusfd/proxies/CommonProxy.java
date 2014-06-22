@@ -3,11 +3,14 @@ package com.labswag.seamusfd.proxies;
 import com.labswag.seamusfd.blocks.*;
 import com.labswag.seamusfd.blocks.lamps.*;
 //import com.labswag.seamusfd.compat.MFPluginListener;
+import com.labswag.seamusfd.blocks.machines.MachineScientificGrinder;
+import com.labswag.seamusfd.blocks.ores.OreCrystallineLumin;
 import com.labswag.seamusfd.items.ItemSyringeEmpty;
 //import com.labswag.seamusfd.network.MFSPH;
 import com.labswag.seamusfd.items.crafting.*;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
@@ -23,6 +26,7 @@ public class CommonProxy {
     public static Block labPanel;
     public static Block labPillar;
     public static Block labGrate;
+    public static Block oreCrystallineLumin;
 
     //Lamps
     public static Block lampWhiteD;
@@ -58,6 +62,10 @@ public class CommonProxy {
     public static Item orangeLuminousDust;
     public static Item purpleLuminousDust;
     public static Item pinkLuminousDust;
+    public static Item crystalLumin;
+
+    //Machines
+    public static Block machineScientificGrinder;
 
 //    //armor
 //    public static ItemArmor.ArmorMaterial scienceArmor;
@@ -92,6 +100,9 @@ public class CommonProxy {
         //Items
         syringeEmpty = new ItemSyringeEmpty();
         GameRegistry.registerItem(syringeEmpty, "syringeEmpty");
+
+        crystalLumin = new ItemCrystalLumin();
+        GameRegistry.registerItem(crystalLumin, "crystalLumin");
 
         luminousDust = new ItemLuminousDust();
         GameRegistry.registerItem(luminousDust, "luminousDust");
@@ -135,11 +146,18 @@ public class CommonProxy {
         labPanel = new BlockLabPanel();
         GameRegistry.registerBlock(labPanel, "labPanel");
 
+        oreCrystallineLumin = new OreCrystallineLumin(Material.iron);
+        GameRegistry.registerBlock(oreCrystallineLumin, "oreCrystallineLumin");
+
         labPillar = new BlockLabPillar();
         GameRegistry.registerBlock(labPillar, "labPillar");
 
         labGrate = new BlockLabGrate();
         GameRegistry.registerBlock(labGrate, "labGrate");
+
+        //Machines
+        machineScientificGrinder = new MachineScientificGrinder(true);
+        GameRegistry.registerBlock(machineScientificGrinder, "machineScientificGrinder");
 
         //Lamps
         lampWhiteD = new BlockLampWhiteD();
@@ -194,6 +212,9 @@ public class CommonProxy {
     }
 
     protected void initRecipes() {
+
+        GameRegistry.addSmelting(oreCrystallineLumin, new ItemStack(crystalLumin), 0.1f);
+
         GameRegistry.addRecipe(new ItemStack(lampWhiteD, 5),
                 "yxy",
                 "xzx",

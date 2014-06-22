@@ -2,11 +2,13 @@ package com.labswag.seamusfd;
 
 import com.labswag.seamusfd.libs.ModInfo;
 import com.labswag.seamusfd.proxies.CommonProxy;
+import com.labswag.seamusfd.worldgen.WorldGenCrystalLumin;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 //import universalteam.universalcore.utils.UCLogger;
@@ -35,6 +37,13 @@ public class ModLabSwag {
         }
     };
 
+    public static CreativeTabs labSwagTabMachines = new CreativeTabs("labSwagTabMachines") {
+        @Override
+        public Item getTabIconItem() {
+            return new Item();
+        }
+    };
+
     @SidedProxy(clientSide = "com.labswag.seamusfd.proxies.ClientProxy", serverSide = "com.labswag.seamusfd.proxies.CommonProxy")
     public static CommonProxy proxy;
 
@@ -53,6 +62,7 @@ public class ModLabSwag {
     public void init(FMLInitializationEvent event)
     {
         proxy.init();
+        GameRegistry.registerWorldGenerator(new WorldGenCrystalLumin(), 5);
     }
 
     @Mod.EventHandler
