@@ -1,6 +1,5 @@
 # Blender v2.69 (sub 0) OBJ File: 'ScientificGrinder.blend'
 # www.blender.org
-mtllib ModelScientificGrinder.mtl
 o Cube
 v 1.000000 -1.000000 -1.000000
 v 1.000000 -1.000000 1.000000
@@ -55,7 +54,6 @@ v -0.277246 0.475423 -0.625422
 v 0.000000 -0.138171 -0.679228
 v 0.315927 -0.138171 -0.679228
 v -0.294138 -0.138171 -0.679228
-usemtl Material
 s off
 f 13 2 3 15
 f 14 16 7 6
