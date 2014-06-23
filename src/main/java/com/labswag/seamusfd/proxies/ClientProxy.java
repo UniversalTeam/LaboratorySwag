@@ -1,5 +1,8 @@
 package com.labswag.seamusfd.proxies;
 
+import com.labswag.seamusfd.client.render.RenderScientificGrinder;
+import com.labswag.seamusfd.tileentity.TileEntityScientificGrinder;
+import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.client.registry.RenderingRegistry;
 
 /**
@@ -10,6 +13,7 @@ public class ClientProxy extends CommonProxy {
 
     public void preInit() {
         super.preInit();
+        renderMachines();
     }
 
     public void init() {
@@ -22,5 +26,9 @@ public class ClientProxy extends CommonProxy {
 
     public int registerArmor(String armor) {
         return RenderingRegistry.addNewArmourRendererPrefix(armor);
+    }
+
+    protected void renderMachines() {
+        ClientRegistry.bindTileEntitySpecialRenderer(TileEntityScientificGrinder.class, new RenderScientificGrinder());
     }
 }
