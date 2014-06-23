@@ -1,6 +1,6 @@
 package com.labswag.seamusfd.proxies;
 
-import com.labswag.seamusfd.client.render.RenderScientificGrinder;
+import com.labswag.seamusfd.client.render.tiles.TESRScientificGrinder;
 import com.labswag.seamusfd.tileentity.TileEntityScientificGrinder;
 import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.client.registry.RenderingRegistry;
@@ -29,6 +29,6 @@ public class ClientProxy extends CommonProxy {
     }
 
     protected void renderMachines() {
-        ClientRegistry.bindTileEntitySpecialRenderer(TileEntityScientificGrinder.class, new RenderScientificGrinder());
+        ClientRegistry.bindTileEntitySpecialRenderer(TileEntityScientificGrinder.class, new TESRScientificGrinder());
     }
 }

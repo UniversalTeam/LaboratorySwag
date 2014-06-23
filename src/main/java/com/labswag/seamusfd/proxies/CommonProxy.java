@@ -13,6 +13,7 @@ import com.labswag.seamusfd.items.ItemSyringeEmpty;
 //import com.labswag.seamusfd.network.MFSPH;
 import com.labswag.seamusfd.items.crafting.*;
 import com.labswag.seamusfd.network.MFSPH;
+import com.labswag.seamusfd.tileentity.TileEntityScientificGrinder;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -163,6 +164,7 @@ public class CommonProxy {
         //Machines
         machineScientificGrinder = new MachineScientificGrinder(true);
         GameRegistry.registerBlock(machineScientificGrinder, "machineScientificGrinder");
+        GameRegistry.registerTileEntity(TileEntityScientificGrinder.class, "tileEnitityScientificGrinder");
 
         //Lamps
         lampWhiteD = new BlockLampWhiteD();
