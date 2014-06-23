@@ -16,7 +16,7 @@ public class BlockLampBlueA extends Block {
         this.setCreativeTab(ModLabSwag.labSwagTabBlocks);
         this.setBlockName("lampBlueA");
         this.setLightLevel(1f);
-        this.setBlockTextureName(ModInfo.MODID + "lampBlueA.png");
+        this.setBlockTextureName(ModInfo.MODID + "lampBlue.png");
     }
 
     public boolean isOpaqueCube() {

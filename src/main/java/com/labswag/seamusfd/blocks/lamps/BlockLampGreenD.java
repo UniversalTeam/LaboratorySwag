@@ -17,7 +17,7 @@ public class BlockLampGreenD extends Block{
         this.blockHardness = 10f;
         this.setCreativeTab(ModLabSwag.labSwagTabBlocks);
         this.setBlockName("lampGreenD");
-        this.setBlockTextureName(ModInfo.MODID + "lampGreenD.png");
+        this.setBlockTextureName(ModInfo.MODID + "lampGreen.png");
     }
 
     public boolean onBlockActivated(World world, int in1, int int2, int int3, EntityPlayer player, int int4, float float1, float float2, float float3) {
