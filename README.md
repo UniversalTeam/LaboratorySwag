@@ -2,6 +2,8 @@
 
 This is a mod adding different useful laboratory related items to Minecraft
 
+Minecraft Forums Topic: http://www.minecraftforum.net/topic/2770946-172wiplaboratoryswagno-release-yet/
+
 ## Laboratory Blocks:
 
 1. Lab Panel
@@ -13,10 +15,25 @@ This is a mod adding different useful laboratory related items to Minecraft
 7. Red Lab Lamps
 8. Yellow Lab Lamps
 9. Blue Lab Lamps
+10. Orange Lab Lamps
+11. Purple Lab Lamps
+12. Pink Lab Lamps
+13. Crystalline Lumin Ore
+14. Scientific Grinder
 
 ## Laboratory Items:
 
 1. Empty Syringe
+2. Crystal Lumin
+3. Luminous Dust
+4. Gray Luminous Dust
+5. Black Luminous Dust
+6. Red Luminous Dust
+7. Yellow Luminous Dust
+8. Blue Luminous Dust
+9. Orange Luminous Dust
+10. Purple Luminous Dust
+11. Pink Luminous Dust
 
 ## Installation:
 
