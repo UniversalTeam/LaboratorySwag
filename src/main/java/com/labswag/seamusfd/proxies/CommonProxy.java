@@ -85,7 +85,7 @@ public class CommonProxy {
         initBlocks();
         initItems();
         initRecipes();
-//        initArmorMaterials();
+        initMachines();
     }
 
     public void init() {
@@ -161,11 +161,6 @@ public class CommonProxy {
         labGrate = new BlockLabGrate();
         GameRegistry.registerBlock(labGrate, "labGrate");
 
-        //Machines
-        machineScientificGrinder = new MachineScientificGrinder(true);
-        GameRegistry.registerBlock(machineScientificGrinder, "machineScientificGrinder");
-        GameRegistry.registerTileEntity(TileEntityScientificGrinder.class, "tileEnitityScientificGrinder");
-
         //Lamps
         lampWhiteD = new BlockLampWhiteD();
         GameRegistry.registerBlock(lampWhiteD, "lampWhiteD");
@@ -216,6 +211,13 @@ public class CommonProxy {
         GameRegistry.registerBlock(lampPinkD, "lampPinkD");
         lampPinkA = new BlockLampPinkA();
         GameRegistry.registerBlock(lampPinkA, "lampPinkA");
+    }
+
+    protected void initMachines() {
+        //Generic
+        machineScientificGrinder = new MachineScientificGrinder(true);
+        GameRegistry.registerBlock(machineScientificGrinder, "machineScientificGrinder");
+        GameRegistry.registerTileEntity(TileEntityScientificGrinder.class, "tileEnitityScientificGrinder");
     }
 
     protected void initRecipes() {

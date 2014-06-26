@@ -1,7 +1,7 @@
 package com.labswag.seamusfd.client.render.tiles;
 
 import com.labswag.seamusfd.libs.ModInfo;
-import com.labswag.seamusfd.models.ModelScientificGrinder;
+import com.labswag.seamusfd.models.ModelScientificGrinderOutdated;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ResourceLocation;
@@ -13,11 +13,11 @@ import org.lwjgl.opengl.GL11;
  */
 public class TESRScientificGrinder extends TileEntitySpecialRenderer {
     private static final ResourceLocation texture = new ResourceLocation(ModInfo.MODID + ":" + "textures/models/ScientificGrinder.png");
-    private ModelScientificGrinder model;
+    private ModelScientificGrinderOutdated model;
 
     public TESRScientificGrinder()
     {
-        this.model = new ModelScientificGrinder();
+        this.model = new ModelScientificGrinderOutdated();
     }
 
     public void renderTileEntityAt(TileEntity tileentity, double x, double y, double z, float f)

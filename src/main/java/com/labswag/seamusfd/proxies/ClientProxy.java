@@ -24,9 +24,9 @@ public class ClientProxy extends CommonProxy {
         super.postInit();
     }
 
-    public int registerArmor(String armor) {
-        return RenderingRegistry.addNewArmourRendererPrefix(armor);
-    }
+//    public int registerArmor(String armor) {
+//        return RenderingRegistry.addNewArmourRendererPrefix(armor);
+//    }
 
     protected void renderMachines() {
         ClientRegistry.bindTileEntitySpecialRenderer(TileEntityScientificGrinder.class, new TESRScientificGrinder());
