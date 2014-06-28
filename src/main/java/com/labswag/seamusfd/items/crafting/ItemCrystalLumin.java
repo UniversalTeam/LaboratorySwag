@@ -1,6 +1,8 @@
 package com.labswag.seamusfd.items.crafting;
 
 import com.labswag.seamusfd.ModLabSwag;
+import com.labswag.seamusfd.libs.ModInfo;
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.Item;
 
 /**
@@ -12,5 +14,10 @@ public class ItemCrystalLumin extends Item {
         this.setUnlocalizedName("crystalLumin");
         this.setCreativeTab(ModLabSwag.labSwagTabItems);
         this.setMaxDamage(44);
+    }
+
+    @Override
+    public void registerIcons(IIconRegister par1IconRegister) {
+        this.itemIcon = par1IconRegister.registerIcon(ModInfo.MODID + ":LuminCrystal");
     }
 }
