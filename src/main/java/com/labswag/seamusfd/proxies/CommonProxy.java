@@ -215,7 +215,7 @@ public class CommonProxy {
 
     protected void initMachines() {
         //Generic
-        machineScientificGrinder = new MachineScientificGrinder(true);
+        machineScientificGrinder = new MachineScientificGrinder();
         GameRegistry.registerBlock(machineScientificGrinder, "machineScientificGrinder");
         GameRegistry.registerTileEntity(TileEntityScientificGrinder.class, "tileEnitityScientificGrinder");
     }

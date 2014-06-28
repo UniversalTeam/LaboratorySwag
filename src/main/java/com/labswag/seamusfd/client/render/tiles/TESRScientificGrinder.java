@@ -15,13 +15,11 @@ public class TESRScientificGrinder extends TileEntitySpecialRenderer {
     private static final ResourceLocation texture = new ResourceLocation(ModInfo.MODID + ":" + "textures/models/ScientificGrinder.png");
     private ModelScientificGrinderOutdated model;
 
-    public TESRScientificGrinder()
-    {
+    public TESRScientificGrinder() {
         this.model = new ModelScientificGrinderOutdated();
     }
 
-    public void renderTileEntityAt(TileEntity tileentity, double x, double y, double z, float f)
-    {
+    public void renderTileEntityAt(TileEntity tileentity, double x, double y, double z, float f) {
         GL11.glPushMatrix();
         GL11.glTranslatef((float) x + 0.5F, (float) y + 1.5F, (float) z + 0.5F);
         GL11.glRotatef(180, 0F, 0F, 1F);
