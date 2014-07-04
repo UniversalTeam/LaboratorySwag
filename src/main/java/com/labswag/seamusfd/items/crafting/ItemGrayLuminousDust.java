@@ -18,6 +18,6 @@ public class ItemGrayLuminousDust extends Item {
 
     @Override
     public void registerIcons(IIconRegister par1IconRegister) {
-        this.itemIcon = par1IconRegister.registerIcon(ModInfo.MODID + "");
+        this.itemIcon = par1IconRegister.registerIcon(ModInfo.MODID + ":GrayLuminousDust");
     }
 }

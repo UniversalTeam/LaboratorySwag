@@ -29,6 +29,6 @@ public class ClientProxy extends CommonProxy {
 
     protected void renderMachines() {
 //        ClientRegistry.bindTileEntitySpecialRenderer(TileEntityScientificGrinder.class, new TESRScientificGrinder());
-            ClientRegistry.bindTileEntitySpecialRenderer(TileEntityGrate.class, new TESRGrate());
+//            ClientRegistry.bindTileEntitySpecialRenderer(TileEntityGrate.class, new TESRGrate());
     }
 }

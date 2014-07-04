@@ -21,8 +21,6 @@ import universalteam.universalcore.utils.UCLogger;
 @Mod(modid = ModInfo.MODID, name = ModInfo.MODNAME, version = ModInfo.VERSION , dependencies = "required-after:UniversalCore")
 public class ModLabSwag {
 
-//    , dependencies = "required-after:UniversalCore")
-
     public static CreativeTabs labSwagTabBlocks = new CreativeTabs("labSwagTabBlocks") {
         @Override
         public Item getTabIconItem() {
