@@ -2,7 +2,9 @@
 
 This is a mod adding different useful laboratory related items to Minecraft
 
-Minecraft Forums Topic: http://www.minecraftforum.net/topic/2770946-172wiplaboratoryswagno-release-yet/
+> Minecraft Forums Topic: http://www.minecraftforum.net/topic/2770946-172wiplaboratoryswagno-release-yet/
+
+Note: This mod is being postponed for now note that their will be no updates for a while.
 
 ## Laboratory Blocks:
 
