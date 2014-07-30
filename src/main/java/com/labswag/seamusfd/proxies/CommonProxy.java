@@ -6,14 +6,11 @@ import com.labswag.seamusfd.blocks.decoration.BlockLabPanel;
 import com.labswag.seamusfd.blocks.decoration.BlockLabPillar;
 import com.labswag.seamusfd.blocks.lamps.*;
 //import com.labswag.seamusfd.compat.MFPluginListener;
-import com.labswag.seamusfd.blocks.machines.MachineScientificGrinder;
 import com.labswag.seamusfd.blocks.ores.OreCrystallineLumin;
 import com.labswag.seamusfd.compat.MFPluginListener;
-import com.labswag.seamusfd.items.ItemSyringeEmpty;
 //import com.labswag.seamusfd.network.MFSPH;
 import com.labswag.seamusfd.items.crafting.*;
 import com.labswag.seamusfd.network.MFSPH;
-import com.labswag.seamusfd.tileentity.TileEntityScientificGrinder;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -104,9 +101,6 @@ public class CommonProxy {
 
     protected void initItems() {
         //Items
-        syringeEmpty = new ItemSyringeEmpty();
-        GameRegistry.registerItem(syringeEmpty, "syringeEmpty");
-
         crystalLumin = new ItemCrystalLumin();
         GameRegistry.registerItem(crystalLumin, "crystalLumin");
 
